@@ -1,0 +1,18 @@
+<?php
+//classe helper para nos ajudar a usar Eloquent fora do framework Laravel:
+use Illuminate\Database\Capsule\Manager as Capsule; 
+
+$capsule = new Capsule;
+
+$capsule->addConnection([
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'database_name',
+    'username'  => 'root',
+    'password'  => '',
+    'prefix' => ''
+]);
+
+$capsule->setAsGlobal(); //instancia Capsule disponibilizando-o globalmente via metodos estaticos
+
+$capsule->bootEloquent();//setup Eloquent ORM
