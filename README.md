@@ -26,3 +26,10 @@ mv database.php.example database.php
 - Execute php migrations.php
 - Descomente as linhas comentadas em index.php e execute o arquivo para criar dados na base (php index.php).
 - Para cada tabela criada na base, gere uma Model relacionada, conforme exemplos em /models.
+
+
+### Requisitos de Referência ###
+
+- PHP >= 7.0
+- MySQL 5.7.X
+- [Composer](https://getcomposer.org/)
